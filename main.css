@@ -1,0 +1,198 @@
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FB8C30; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FEAC39; 
+  }
+body{
+    background: linear-gradient(to right, #FEAC39, #FB8C30);
+    font-size: .95em;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+/* navbar */
+.navbar{
+    background: linear-gradient(to right, #000, #FEAC39, #000);
+}
+.navbar-collapse{
+    text-align: center;
+}
+/* top section */
+section .container-fluid .bg-black{
+    background: linear-gradient(to right, #FEAC39,#000 #FB8C30);
+    /* width: 70%; */
+}
+.order-card {
+    color: #fff;
+}
+
+.bg-c-blue {
+    background: linear-gradient(45deg,#4099ff,#73b4ff);
+}
+
+.bg-c-green {
+    background: linear-gradient(45deg,#2ed8b6,#59e0c5);
+}
+
+.bg-c-yellow {
+    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+}
+
+.bg-c-pink {
+    background: linear-gradient(45deg,#FF5370,#ff869a);
+}
+
+
+.card {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    box-shadow: 0 1px 2.94px 0.06px rgba(4,26,55,0.16);
+    border: none;
+    margin-bottom: 30px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.card .card-block {
+    padding: 25px;
+}
+
+.order-card i {
+    font-size: 26px;
+}
+ 
+
+/* table section */
+.table{
+    background: transparent;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-spacing: 0;
+    padding: 0 10px;
+}
+.table td, .table th{
+    padding: 1em 1.5em;
+    border: none;
+}
+.table tr:hover td{
+    color: #fff;
+    
+}
+.form-control{
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid white;
+    color: #fff;
+    transition: border .3s ease-in;
+}
+.form-control:focus, .btn-secondary:hover, .btn-secondary:active{
+    background-color: rgba(0,0,0,.05);
+    color: #fff;
+    box-shadow: none;
+    border: 2px solid white;
+}
+.form-control::placeholder{
+    color: white;
+}
+.btn-secondary{
+    background: none;
+    margin: 4px;
+    border-radius: 20px;
+    border: 1px solid #fff;
+}
+
+.bootstrap-table.fullscreen {
+    background: linear-gradient(to right, #FEAC39, #FB8C30);
+    font-size: .95em;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+    outline: none;
+    box-shadow: none;
+    border-radius: 20px;
+}
+
+.dropdown-menu{
+    background-color: rgba(23, 23, 23, 0.82);
+    position: relative;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+    z-index: 4;
+    
+}
+
+.dropdown-menu .dropdown-item{
+    color: #fff;
+    font-size: .95em;
+    transition: all .2s ease-in-out;
+    clear: both;
+    padding: 5px auto;
+}
+.dropdown-menu .dropdown-item:hover{
+    color: #FB8C30;
+    background: transparent;
+    overflow: hidden;
+}
+.dropdown-menu .dropdown-item.active {
+    background: none;
+    color: #FB8C30;
+}
+
+.pagination .page-link{
+    background: transparent;
+    border: none;
+    color: #fff;
+}
+.page-item.active .page-link {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: rgba(0,0,0,.05);
+}
+.page-item.disabled .page-link{
+    background: none;
+    color: #fff;
+}
+.pagination-detail .pagination-info {
+    display: none;
+}
+
+footer{
+    margin-top: 20px;
+}
+footer .container a i{
+    text-decoration: none;
+    padding: 10px;
+    margin: 1px 2px;;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+footer .container a:hover i{
+    background-color: rgba(0,0,0,.05);
+}
+footer .container a .fa{
+    font-size: 20px;    
+    color: #fff;
+}

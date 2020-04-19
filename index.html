@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>COVID-19 KE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <div class="alert alert-warning alert-dismissible fade show text-center mb-0" role="alert">
+        <span class="text-danger"><i class="fa fa-bullhorn fa-spin"></i></span> "Stay Home", "Keep a safe distance", "Wash hands often" and if Sick "Call helpline! <span class="text-danger"><i class="fa fa-bullhorn fa-spin"></i>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top pt-0">
+        <a class="navbar-brand" href="#?">
+            <h2 class="">Covi<i class="fa fa-spinner fa-spin"></i>Data</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="https://www.who.int" target="_blank">WHO <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white"
+                        href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+                        target="_blank">Guidelines <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white"
+                        href="https://www.who.int/csr/disease/coronavirus_infections/faq_dec12/en/"
+                        target="_blank">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- top section -->
+    <section class="top-section">
+        <div class="container-fluid">
+            <div class="row bg-black mt-4">
+                <div class="col p-2">
+                    <h2 class="display-5 d-inline border-bottom"><span><i class="fa fa-angle-double-right"></i></span> Global COVID-19
+                        Data</h2>
+                    <p class="float-right text-white d-inline">Today: <span id="date">Today<span></p>
+                </div>
+            </div>
+            <div class="row mb-4 mt-4">
+                <div class="col-md-4 col-xl-3 col-sm-6">
+                    <div class="card bg-warning order-card">
+                        <div class="card-block">
+                            <h4 class="m-b-20 text-center">Today Cases</h4>
+                            <h3 class="text-center"><i class="fa fa-bar-chart"></i></h3>
+                            <h2 class="text-center"><span id="today"> 486</span></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xl-3 col-sm-6">
+                    <div class="card bg-c-yellow order-card">
+                        <div class="card-block">
+                            <h4 class="m-b-20 text-center">Total Cases</h4>
+                            <h3 class="text-center"><i class="fa fa-rocket"></i></h3>
+                            <h2 class="text-center"><span id="cases"> 486</span></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xl-3 col-sm-6">
+                    <div class="card bg-c-pink order-card">
+                        <div class="card-block">
+                            <h4 class="m-b-20 text-center">Deaths</h4>
+                            <h3 class="text-center"><i class="fa fa-refresh"></i></h3>
+                            <h2 class="text-center"><span id="deaths"> 486</span></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xl-3 col-sm-6">
+                    <div class="card bg-c-green order-card">
+                        <div class="card-block">
+                            <h4 class="m-b-20 text-center">Recovered</h4>
+                            <h3 class="text-center"><i class="fa fa-credit-card"></i></h3>
+                            <h2 class="text-center"><span id="recovered"> 486</span></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Data table -->
+    <section>
+        <div class="container-fluid">
+            <table id="table" data-toggle="table" data-height="600" data-sort-class="table-active" data-sortable="true"
+                data-pagination="true" data-virtual-scroll="true" data-search="true" data-show-columns="true"
+                data-show-toggle="true" data-show-fullscreen="true" data-id-field="id"
+                data-url="https://coronavirus-19-api.herokuapp.com/countries" class="table-striped">
+                <thead>
+                    <tr>
+                        <th data-field="country" data-sortable="true">Country/Continent</th>
+                        <th data-field="todayCases" data-sortable="true">Today Cases</th>
+                        <th data-field="todayDeaths" data-sortable="true">Today Deaths</th>
+                        <th data-field="cases" data-sortable="true">Total Cases</th>
+                        <th data-field="deaths" data-sortable="true">Total Deaths</th>
+                        <th data-field="recovered" data-sortable="true">Recovered</th>
+                        <th data-field="active" data-sortable="true">Active Cases</th>
+                        <th data-field="critical" data-sortable="true">Critical</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h4>Created with <span><i class="fa fa-heart"></i></span> by Eric<h4>
+                            <div>
+                                <a href="https://github.com/erickarugu32"><i class="fa fa-github"></i></a>
+                                <a href="https://linkedin.com/in/eric-karugu-904569145/"><i
+                                        class="fa fa-linkedin"></i></a>
+                                <a href="https://erickarugu32.github.io"><i class="fa fa-globe"></i></a>
+                                <a href="https://twitter.com/karugu_eric"><i class="fa fa-twitter"></i></a>
+                            </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://use.fontawesome.com/73d59e42a2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
