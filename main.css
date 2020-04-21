@@ -21,14 +21,14 @@
     background: #FEAC39; 
   }
 body{
-    background: linear-gradient(to right, #FEAC39, #FB8C30);
+    background: linear-gradient(to right, #79521b, #e66800);
     font-size: .95em;
     color: #fff;
     font-family: 'Lato', sans-serif;
 }
 /* navbar */
 .navbar{
-    background: linear-gradient(to right, #000, #FEAC39, #000);
+    background: linear-gradient(to right, #000, #000);
 }
 .navbar-collapse{
     text-align: center;
@@ -43,7 +43,7 @@ section .container-fluid .bg-black{
 }
 
 .bg-c-blue {
-    background: linear-gradient(45deg,#4099ff,#73b4ff);
+    background: linear-gradient(45deg,#928d00,#1d1f06);
 }
 
 .bg-c-green {
@@ -51,7 +51,7 @@ section .container-fluid .bg-black{
 }
 
 .bg-c-yellow {
-    background: linear-gradient(45deg,#FFB64D,#ffcb80);
+    background: linear-gradient(45deg,#483110,#4c310b);
 }
 
 .bg-c-pink {
