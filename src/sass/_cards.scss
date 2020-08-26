@@ -1,0 +1,39 @@
+.top-section .card {
+  color: #000;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: scaleY(2pc);
+    cursor: pointer;
+  }
+  &:hover .fa {
+    animation: spin 1s linear 1;
+  }
+
+  &.today_cases {
+    border-left: 10px solid blue;
+  }
+  &.total_cases {
+    border-left: 10px solid yellow;
+  }
+  &.total_deaths {
+    border-left: 10px solid red;
+  }
+  &.total_recoveries {
+    border-left: 10px solid green;
+  }
+}
+
+// spin animation
+@keyframes spin {
+  0% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

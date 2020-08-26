@@ -1,0 +1,46 @@
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0f0233;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #feac39;
+}
+h1 {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #e4dede;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+body {
+  background: #0f0233;
+  font-size: 0.95em;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+.bg-black {
+  background: #000;
+}
+
+/* top section */
+section .container-fluid .bg-black {
+  background: linear-gradient(to right, #feac39, #000 #fb8c30);
+  /* width: 70%; */
+}
+
+/* The charts section CSS */

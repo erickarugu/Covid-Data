@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html> 
 
 <head>
     <meta charset="utf-8" />
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="./dist/style.css" />
 </head>
 
 <body>
@@ -23,13 +23,20 @@
     </div>
 
     <div class="content hidden" id="content">
-        <div class="alert alert-warning alert-dismissible fade show text-center mb-0" role="alert">
-            <span class="text-danger"><i class="fa fa-bullhorn fa-spin"></i></span> "Stay Home", "Keep a safe distance",
-            "Wash hands often" and if Sick "Call helpline!
+        <div class="alert alert-info alert-dismissible fade show text-center mb-0" role="alert">
+            
+            <div class="row">
+                <div class="col-md-8 text-center">
+                    <span class="text-danger"><i class="fa fa-bullhorn fa-spin"></i></span> "Stay Home", "Keep a safe distance",
+            "Wash hands often" and if sick "Call helpline!
+                </div>
+                <div class="col-md-4 text-center">#BlackLivesMatter</div>
+            </div>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        
         <nav class="navbar navbar-expand-lg navbar-dark sticky-top pt-0">
             <a class="navbar-brand" href="#?">
                 <h2 class="">Covi<i class="fa fa-spinner fa-spin"></i>Data</h2>
@@ -67,7 +74,7 @@
             <div class="container-fluid pt-2 mt-2">
                 <div class="row mb-4 mt-4">
                     <div class="col-md-4 col-xl-3 col-sm-6">
-                        <div class="card bg-c-blue order-card">
+                        <div class="card py-4 today_cases">
                             <div class="card-block">
                                 <h4 class="m-b-20 text-center">Today Cases</h4>
                                 <h3 class="text-center"><i class="fa fa-bar-chart"></i></h3>
@@ -77,7 +84,7 @@
                     </div>
 
                     <div class="col-md-4 col-xl-3 col-sm-6">
-                        <div class="card bg-c-yellow order-card">
+                        <div class="card py-4 total_cases">
                             <div class="card-block">
                                 <h4 class="m-b-20 text-center">Total Cases</h4>
                                 <h3 class="text-center"><i class="fa fa-pie-chart"></i></h3>
@@ -87,9 +94,9 @@
                     </div>
 
                     <div class="col-md-4 col-xl-3 col-sm-6">
-                        <div class="card bg-danger order-card">
+                        <div class="card py-4 total_deaths">
                             <div class="card-block">
-                                <h4 class="m-b-20 text-center">Deaths</h4>
+                                <h4 class="m-b-20 text-center">Total Deaths</h4>
                                 <h3 class="text-center"><i class="fa fa-line-chart"></i></h3>
                                 <h2 class="text-center"><span id="deaths"> 486</span></h2>
                             </div>
@@ -97,56 +104,12 @@
                     </div>
 
                     <div class="col-md-4 col-xl-3 col-sm-6">
-                        <div class="card bg-success order-card">
+                        <div class="card py-4 total_recoveries">
                             <div class="card-block">
-                                <h4 class="m-b-20 text-center">Recovered</h4>
+                                <h4 class="m-b-20 text-center">All Recovered</h4>
                                 <h3 class="text-center"><i class="fa fa-credit-card"></i></h3>
                                 <h2 class="text-center"><span id="recovered"> 486</span></h2>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- The charts section - bar and pie -->
-        <section class="charts-section mb-5 mt-2">
-            <div class="container-fluid">
-                <div class="row mt-3 mb-3 d-flex justify-content-around">
-                    <div class="col-12 col-md-6 w-100 mb-4 mb-md-0 mr-2">
-                        <div class="content">
-
-                            <ul class="list-group">
-                                <li class="bg-primary list-group-item text-center display-5"><i class="fa fa-ribbon"></i>To prevent the spread of COVID-19:</li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i> Clean your
-                                    hands often. Use soap and
-                                    water, or an alcohol-based hand rub.</li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i>  Maintain a safe distance from anyone
-                                    who is coughing or sneezing.</li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i>  Don’t touch your eyes, nose or
-                                    mouth.</li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i>  Cover your nose and mouth with your
-                                    bent elbow or a tissue when you cough or sneeze.
-                                </li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i>  Stay home if you feel unwell.</li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i>  If you have a fever, a cough, and
-                                    difficulty breathing, seek medical attention. Call
-                                    in
-                                    advance.</li>
-                                <li class="list-group-item list-group-item-info"><i class="fa fa-check"></i>  Follow the directions of your local
-                                    health authority.</li>
-                                <li class="list-group-item list-group-item-info">Avoiding unneeded visits to medical
-                                    facilities allows healthcare systems to operate
-                                    more
-                                    effectively, therefore protecting you and others.</li>
-                            </ul>
-
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-5 w-100 mb-4 mb-md-0">
-                        <div class="graphSec px-2 p-2">
-                            <h4 class="text-center py-3">World Data</h4>
-                            <canvas id="pie" width="300" height="200"></canvas>
                         </div>
                     </div>
                 </div>
@@ -159,7 +122,7 @@
                 <div class="row bg-black mt-4">
                     <div class="col p-2 bg-black">
                         <h1 class="d-inline display-5"><span><i class="fa fa-angle-double-right"></i></span>All Affected
-                            Countries and Continents</h1>
+                            Countries</h1>
                     </div>
                 </div>
                 <table id="table" data-toggle="table" data-sort-class="table-active" data-sortable="true"
@@ -168,7 +131,7 @@
                     data-url="https://coronavirus-19-api.herokuapp.com/countries" class="table-striped">
                     <thead>
                         <tr>
-                            <th data-field="country" data-sortable="true">Country/Continent</th>
+                            <th data-field="country" data-sortable="true">Country/World</th>
                             <th data-field="todayCases" data-sortable="true">Today Cases</th>
                             <th data-field="todayDeaths" data-sortable="true">Today Deaths</th>
                             <th data-field="cases" data-sortable="true">Total Cases</th>
@@ -207,7 +170,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
-    <script src="main.js"></script>
+    <script src="./src/js/main.js"></script>
 </body>
 
 </html>

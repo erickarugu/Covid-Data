@@ -1,0 +1,22 @@
+footer {
+  margin-top: 20px;
+
+  .container a i {
+    text-decoration: none;
+    padding: 10px;
+    margin: 1px 2px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container a:hover i {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .container a .fa {
+    font-size: 20px;
+    color: #fff;
+  }
+}

@@ -1,0 +1,115 @@
+/* table section */
+.table-section {
+  background: #383838;
+
+  .table {
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-spacing: 0;
+    padding: 0 10px;
+
+    td,
+    th {
+      padding: 1em 1.5em;
+      border: none;
+    }
+    tr:hover td {
+      color: #fff;
+    }
+  }
+}
+
+.form-control {
+  background: transparent;
+  border-radius: 20px;
+  border: 1px solid white;
+  color: #fff;
+  transition: border 0.3s ease-in;
+}
+
+.form-control:focus,
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+.btn-secondary {
+  background: none;
+  margin: 4px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+}
+
+.bootstrap-table.fullscreen {
+  background: linear-gradient(to right, #feac39, #fb8c30);
+  font-size: 0.95em;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  color: #fff;
+  background: transparent;
+  border-color: #fff;
+  outline: none;
+  box-shadow: none;
+  border-radius: 20px;
+}
+
+.dropdown-menu {
+  background-color: rgba(23, 23, 23, 0.82);
+  position: relative;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
+  z-index: 4;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #fff;
+  font-size: 0.95em;
+  transition: all 0.2s ease-in-out;
+  clear: both;
+  padding: 5px auto;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  color: #fb8c30;
+  background: transparent;
+  overflow: hidden;
+}
+
+.dropdown-menu .dropdown-item.active {
+  background: none;
+  color: #fb8c30;
+}
+
+.pagination .page-link {
+  background: transparent;
+  border: none;
+  color: #fff;
+}
+
+.page-item.active .page-link {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.page-item.disabled .page-link {
+  background: none;
+  color: #fff;
+}
+
+.pagination-detail .pagination-info {
+  display: none;
+}
